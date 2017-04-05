@@ -7,4 +7,4 @@ vmodels/*
 !data/.keep 
 !summaries/.keep
 !models/.keep
-!models/.keep
+!vmodels/.keep
