@@ -1,0 +1,10 @@
+*.pyc
+data/*
+summaries/*
+models/*
+vmodels/*
+
+!data/.keep 
+!summaries/.keep
+!models/.keep
+!models/.keep
