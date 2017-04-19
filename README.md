@@ -5,3 +5,11 @@ The code in this repo belongs to the following blog post http://www.priorlabs.co
 
 The code has has been tested with TensorFlow v 0.10 and Python 2.7, but should be safe with Python 3 too.
 
+### run
+
+To run the MNIST-example:
+
+```
+python train.py
+
+```
