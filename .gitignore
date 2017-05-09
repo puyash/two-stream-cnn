@@ -4,6 +4,11 @@ summaries/*
 models/*
 vmodels/*
 
+.ipynb_checkpoints/*
+*.ipynb
+
+
+
 !data/.keep 
 !summaries/.keep
 !models/.keep

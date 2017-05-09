@@ -165,7 +165,7 @@ def network(x1, x2, keep_prob, params):
     # -----------------------------------------------
     
     # concatenate output of the two parallel conv layers      
-    full_in=tf.concat(3, [h_pool1, h_pool2])
+    full_in=tf.concat([h_pool1, h_pool2], 3)
     num_full_in=poollayer1.numout + poollayer2.numout
     
     
@@ -195,7 +195,7 @@ def network(x1, x2, keep_prob, params):
 def optimization_ops(y, Y, l2_loss, reg_param=0.0, learningrate=0.001):
     '''Generates optimization related operations'''
     with tf.name_scope('cost'):
-        cost=tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(y, Y)) + reg_param * l2_loss
+        cost=tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=y, labels=Y)) + reg_param * l2_loss
 
     with tf.name_scope('optimization'):
         optimize=tf.train.AdamOptimizer(learningrate)
