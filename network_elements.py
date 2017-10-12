@@ -61,7 +61,7 @@ class fullLayer(object):
 
     def layer_relu(self, x_in, keep_prob):
         # layer activations with relu and dropout
-        activation=tf.nn.dropout(tf.sigmoid(self.layer(x_in)), keep_prob)
+        activation=tf.nn.dropout(tf.nn.relu(self.layer(x_in)), keep_prob)
         return activation
 
     def layer_sigmoid(self, x_in, keep_prob):
